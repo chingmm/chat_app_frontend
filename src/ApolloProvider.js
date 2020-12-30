@@ -29,7 +29,7 @@ const authLink = setContext((_, { headers }) => {
 httpLink = authLink.concat(httpLink)
 
 const wsLink = new WebSocketLink({
-  uri: `ws://chatter-messaging-backend.herokuapp.com/graphql`,
+  uri: `wss://chatter-messaging-backend.herokuapp.com/graphql`,
   options: {
     reconnect: true,
     connectionParams: {
